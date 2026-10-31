@@ -17,3 +17,8 @@ CategorieDaoImpl categorieDaoImpl = new CategorieDaoImpl(configuration);
 List<Categorie> categories = categorieDaoImpl.GetAllCategories();
 
 Console.WriteLine($"Il y a {categories.Count} catégories trouvés");
+
+foreach (var item in categories)
+{
+    Console.WriteLine($"{item.Id} - {item.Nom}");
+}
